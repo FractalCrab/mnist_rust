@@ -1,0 +1,17 @@
+[package]
+name = "burn-axum-demo"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+axum = "0.8"
+burn = { version = "0.22", default-features = false, features = ["std", "flex"] }
+burn-store = "0.22"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "net"] }
+tower-http = { version = "0.6", features = ["fs"] }
+
+[build-dependencies]
+burn-onnx = "0.22"
+
